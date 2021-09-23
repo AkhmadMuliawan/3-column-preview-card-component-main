@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparant-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-light-gray);
+    color: var(--transparant-white);
+    font-family: 'Lexend Deca', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    position: relative;
+}
+
+.container {
+    width: 920px;
+    height: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.content-wrap {
+    padding: 48px;
+}
+
+.card-1 {
+    background-color: var(--bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+.card-2 {
+    background-color: var(--dark-cyan);
+}
+
+.card-3 {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.content {
+    position: relative;
+    height: 404px;
+}
+
+.content h1 {
+    margin: 28px 0;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+}
+
+.content p {
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.content .btn {
+    display: inline-block;
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    padding: 13px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+}
+
+.content .btn:hover {
+    background-color: transparent;
+    color: var(--very-light-gray);
+}
+
+.bright-orange-text {
+    color: var(--bright-orange);
+}
+
+.dark-cyan-text {
+    color: var(--dark-cyan);
+}
+
+.very-dark-cyan-text {
+    color: var(--very-dark-cyan);
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+}
+
+footer .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: #333;
+}
+footer .attribution a {
+    color: hsl(228, 45%, 44%);
+    font-weight: 700;
+}
+
+
+@media screen and (max-width: 400px) {
+    body {
+        height: 1440px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        width: 326px;
+        height: 1326px;
+    }
+
+    .content-wrap {
+        height: 442px;
+    }
+    
+    .card-1 {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-3 {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .content {
+        height: 346px;
+    }
+
+    footer {
+        position: relative;
+        bottom: -30px;
+    }
+}
